@@ -1,0 +1,16 @@
+<Solution>
+  <Folder Name="/BuildingBlocks/">
+    <Project Path="BuildingBlocks/Articles.Abstractions/Articles.Abstractions.csproj" Id="23f23d02-13b7-4164-8d18-8c9bdee0f905" />
+    <Project Path="BuildingBlocks/Blocks.Domain/Blocks.Domain.csproj" Id="3536ed7f-0a42-43a5-9dd5-f98e248d5d29" />
+    <Project Path="BuildingBlocks/Blocks.EntityFramework/Blocks.EntityFramework.csproj" Id="56f24cc4-6582-454c-bc87-c1348946a450" />
+    <Project Path="BuildingBlocks/Blocks.Exceptions/Blocks.Exceptions.csproj" Id="3e8038c3-ab0c-49df-a827-f8600c2d2995" />
+    <Project Path="BuildingBlocks/Blocks.MediatR/Blocks.MediatR.csproj" Id="f01d77b2-0096-4d7c-9fe7-e634c5c4e453" />
+  </Folder>
+  <Folder Name="/Services/" />
+  <Folder Name="/Services/Submission/">
+    <Project Path="Services/Submission/Submission.API/Submission.API.csproj" Id="70d1cd5b-7a80-4228-8493-6e9681ae9c59" />
+    <Project Path="Services/Submission/Submission.Application/Submission.Application.csproj" Id="cfb312ff-6b72-48ee-8a1a-12f214cc9493" />
+    <Project Path="Services/Submission/Submission.Domain/Submission.Domain.csproj" Id="fca95fb8-66b4-4f87-8975-dd1dc96a944a" />
+    <Project Path="Services/Submission/Submission.Persistence/Submission.Persistence.csproj" Id="5910d309-eeb4-44f7-b75f-a75ffe72aa68" />
+  </Folder>
+</Solution>

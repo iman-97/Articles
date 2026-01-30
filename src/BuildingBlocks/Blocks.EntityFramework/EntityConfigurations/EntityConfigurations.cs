@@ -1,0 +1,18 @@
+﻿using Blocks.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+namespace Blocks.EntityFramework.EntityConfigurations;
+
+public abstract class EntityConfigurations<T> : IEntityTypeConfiguration<T> where T : class, IEntity
+{
+    public virtual void Configure(EntityTypeBuilder<T> builder)
+    {
+        builder.HasKey(x => x.Id);
+
+        builder
+            .Property(x => x.Id)
+            .ValueGeneratedOnAdd()
+            .HasColumnOrder(0);
+    }
+}
