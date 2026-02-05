@@ -1,34 +1,24 @@
-﻿using Articles.Abstractions;
-using Articles.Abstractions.Enums;
-using Blocks.Domain;
-using FluentValidation;
-using MediatR;
-using System.Text.Json.Serialization;
+﻿using Blocks.Core.FluentValidations;
 
 namespace Submission.Application.Features.CreateArticle;
 
-public record CreateArticleCommand(int JournalId, string Title, string Scope, ArticleType Type) : IAuditableAction, IRequest<IdResponse>
+public record CreateArticleCommand(int JournalId, string Title, string Scope, ArticleType Type) : ArticleCommand
 {
-    [JsonIgnore]
-    public DateTime CreatedOn => DateTime.UtcNow;
-    [JsonIgnore]
-    public int CreatedById { get; set; }
+    public override ArticleActionType ActionType => ArticleActionType.Create;
 }
 
-public class CreateArticleCommandValidator : AbstractValidator<CreateArticleCommand>
+public class CreateArticleCommandValidator : ArticleCommandValidator<CreateArticleCommand>
 {
     public CreateArticleCommandValidator()
     {
         RuleFor(x => x.Title)
-            .NotEmpty()
-            .WithMessage("Title cannot be empty");
+            .NotEmptyWithMessage(nameof(CreateArticleCommand.Title));
 
         RuleFor(x => x.Scope)
-            .NotEmpty()
-            .WithMessage("Scope cannot be empty");
+            .NotEmptyWithMessage(nameof(CreateArticleCommand.Scope));
 
         RuleFor(x => x.JournalId)
             .GreaterThan(0)
-            .WithMessage("Invalid Journal id");
+            .WithMessageForInvalidId(nameof(CreateArticleCommand.JournalId));
     }
 }

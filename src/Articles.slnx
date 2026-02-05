@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/BuildingBlocks/">
     <Project Path="BuildingBlocks/Articles.Abstractions/Articles.Abstractions.csproj" Id="23f23d02-13b7-4164-8d18-8c9bdee0f905" />
+    <Project Path="BuildingBlocks/Articles.Security/Articles.Security.csproj" Id="0126f88c-0dd1-43a0-81e7-08a231438489" />
     <Project Path="BuildingBlocks/Blocks.Core/Blocks.Core.csproj" Id="eac55319-7812-4e75-a3bd-d633d2425c8f" />
     <Project Path="BuildingBlocks/Blocks.Domain/Blocks.Domain.csproj" Id="3536ed7f-0a42-43a5-9dd5-f98e248d5d29" />
     <Project Path="BuildingBlocks/Blocks.EntityFramework/Blocks.EntityFramework.csproj" Id="56f24cc4-6582-454c-bc87-c1348946a450" />
