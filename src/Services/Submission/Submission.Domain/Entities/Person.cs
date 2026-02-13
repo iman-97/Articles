@@ -1,12 +1,11 @@
 ﻿using Blocks.Domain.Entities;
 using Submission.Domain.ValueObjects;
+using System.Collections.Generic;
 
 namespace Submission.Domain.Entities;
 
-public class Person : IEntity
+public class Person : Entity
 {
-    public int Id { get; }
-
     public required string FirstName { get; init; }
     public required string LastName { get; init; }
 

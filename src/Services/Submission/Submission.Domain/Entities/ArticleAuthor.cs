@@ -1,4 +1,5 @@
 ﻿using Articles.Abstractions.Enums;
+using System.Collections.Generic;
 
 namespace Submission.Domain.Entities;
 

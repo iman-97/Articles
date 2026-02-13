@@ -29,6 +29,9 @@ public class SubmissionDbContext : DbContext
     public virtual DbSet<Author> Authors { get; set; }
     public virtual DbSet<ArticleAuthor> ArticleAuthors { get; set; }
 
+    public virtual DbSet<Asset> Assets { get; set; }
+    public virtual DbSet<AssetTypeDefinition> AssetTypeDefinitions { get; set; }
+
     #endregion
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
