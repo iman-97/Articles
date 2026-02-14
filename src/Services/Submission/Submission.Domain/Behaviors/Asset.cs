@@ -1,4 +1,5 @@
-﻿using Submission.Domain.ValueObjects;
+﻿using FileStorage.Contracts;
+using Submission.Domain.ValueObjects;
 
 namespace Submission.Domain.Entities;
 
@@ -15,5 +16,15 @@ public partial class Asset
             Name = AssetName.FromAssetType(assetType),
             Type = assetType.Name
         };
+    }
+
+    public string GenerateStorageFilePath(string fileName)
+        => $"Articles/{ArticleId}/{Name}/{fileName}";
+
+    public File CreateFile(UploadResponse uploadResponse, AssetTypeDefinition assetType)
+    {
+        File = File.CreateFile(uploadResponse, this, assetType);
+
+        return File;
     }
 }
