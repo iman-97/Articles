@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Modules\FileStorage\FileStorage.MOngoGridFS\FileStorage.MOngoGridFS.csproj" />
     <ProjectReference Include="..\Submission.Application\Submission.Application.csproj" />
   </ItemGroup>
 

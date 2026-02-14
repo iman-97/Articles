@@ -8,6 +8,11 @@
     <Project Path="BuildingBlocks/Blocks.Exceptions/Blocks.Exceptions.csproj" Id="3e8038c3-ab0c-49df-a827-f8600c2d2995" />
     <Project Path="BuildingBlocks/Blocks.MediatR/Blocks.MediatR.csproj" Id="f01d77b2-0096-4d7c-9fe7-e634c5c4e453" />
   </Folder>
+  <Folder Name="/Modules/" />
+  <Folder Name="/Modules/FileStorage/">
+    <Project Path="Modules/FileStorage/FileStorage.Contracts/FileStorage.Contracts.csproj" Id="784ffbe6-ae1e-4622-bafc-38e2fd6ff111" />
+    <Project Path="Modules/FileStorage/FileStorage.MOngoGridFS/FileStorage.MOngoGridFS.csproj" Id="77f2703e-30e5-4545-bcad-cfd744e97e6f" />
+  </Folder>
   <Folder Name="/Services/" />
   <Folder Name="/Services/Submission/">
     <Project Path="Services/Submission/Submission.API/Submission.API.csproj" Id="70d1cd5b-7a80-4228-8493-6e9681ae9c59" />
